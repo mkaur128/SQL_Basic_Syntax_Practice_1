@@ -8,3 +8,9 @@ FROM Claimant
 
 #Query 2: The date an examiner was assigned a claim 
 
+SELECT PK, MAX(EntryDate) AS ExaminerAssignedDate <br></br> 
+FROM ClaimLog <br></br> 
+WHERE FileName = 'ExaminerCode' <br></br> 
+GROUP BY PK 
+
+
