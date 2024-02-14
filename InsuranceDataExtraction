@@ -1,3 +1,6 @@
+---SQL Queries produced in SSMS---
+---Practice case study resource from Udemy--- 
+
 #Query 1: The last date a claimant re-opened a claim
 
 USE Insurance 
@@ -8,15 +11,15 @@ FROM Claimant
 
 #Query 2: The date an examiner was assigned a claim 
 
-SELECT PK, MAX(EntryDate) AS ExaminerAssignedDate <br></br> 
-FROM ClaimLog <br></br> 
-WHERE FileName = 'ExaminerCode' <br></br> 
+SELECT PK, MAX(EntryDate) AS ExaminerAssignedDate 
+FROM ClaimLog 
+WHERE FileName = 'ExaminerCode' 
 GROUP BY PK 
 
 #Query 3: The last date an examiner published on the Reserving Tool for each claim
 
 SELECT ClaimNumber, MAX(EnteredOn) AS LastSavedOn
 FROM ReservingTool 
-WHERE IsAved = 1 
+WHERE IsSaved = 1 
 GROUP BY ClaimNumber 
 
