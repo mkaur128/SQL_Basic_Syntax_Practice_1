@@ -13,4 +13,5 @@ FROM ClaimLog <br></br>
 WHERE FileName = 'ExaminerCode' <br></br> 
 GROUP BY PK 
 
+#Query 3: 
 
