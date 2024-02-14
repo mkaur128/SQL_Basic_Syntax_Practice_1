@@ -7,18 +7,4 @@ Objectives:
 2. The date an examiner was assigned a claim
 3. The last date an examiner published on the Reserving Tool for each claim  <br></br> 
 
-#Query 1: The last date a claimant re-opened a claim
-
-USE Insurance <br></br> 
-GO 
-
-SELECT ClaimantID, ReopenedDate <br></br> 
-FROM Claimant <br></br> 
-
-#Query 2: The date an examiner was assigned a claim 
-
-SELECT PK, MAX(EntryDate) AS ExaminerAssignedDate <br></br> 
-FROM ClaimLog <br></br> 
-WHERE FileName = 'ExaminerCode' <br></br> 
-GROUP BY PK 
 
