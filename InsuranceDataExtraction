@@ -13,5 +13,10 @@ FROM ClaimLog <br></br>
 WHERE FileName = 'ExaminerCode' <br></br> 
 GROUP BY PK 
 
-#Query 3: 
+#Query 3: The last date an examiner published on the Reserving Tool for each claim
+
+SELECT ClaimNumber, MAX(EnteredOn) AS LastSavedOn
+FROM ReservingTool 
+WHERE IsAved = 1 
+GROUP BY ClaimNumber 
 
