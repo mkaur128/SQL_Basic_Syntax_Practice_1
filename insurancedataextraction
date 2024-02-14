@@ -1,0 +1,10 @@
+#Query 1: The last date a claimant re-opened a claim
+
+USE Insurance 
+GO 
+
+SELECT ClaimantID, ReopenedDate
+FROM Claimant 
+
+#Query 2: The date an examiner was assigned a claim 
+
