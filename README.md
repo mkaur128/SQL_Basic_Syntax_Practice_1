@@ -7,5 +7,10 @@ Objectives:
 2. The date an examiner was assigned a claim
 3. The last date an examiner published on the Reserving Tool for each claim  
 
-<u>Query 1</U>
+Query 1: The last date a claimant re-opened a claim
 
+USE Insurance <br></br> 
+GO 
+
+SELECT ClaimantID, ReopenedeDate <br></br> 
+FROM Claimant
